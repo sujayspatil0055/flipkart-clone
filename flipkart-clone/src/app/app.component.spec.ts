@@ -16,6 +16,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+
   it(`should have as title 'angular-admin'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;

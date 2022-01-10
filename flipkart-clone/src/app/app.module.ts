@@ -14,6 +14,7 @@ import { UserLoginComponent } from './user/login/user-login.component';
 import { UserListingComponent } from './user/listing/user-listing.component';
 import { UserProfileComponent } from './user/profile/user-profile.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

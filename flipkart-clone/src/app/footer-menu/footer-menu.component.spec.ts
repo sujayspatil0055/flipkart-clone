@@ -13,6 +13,7 @@ describe('FooterMenuComponent', () => {
     .compileComponents();
   });
 
+
   beforeEach(() => {
     fixture = TestBed.createComponent(FooterMenuComponent);
     component = fixture.componentInstance;
