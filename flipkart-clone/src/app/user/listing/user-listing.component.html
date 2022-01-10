@@ -1,0 +1,28 @@
+<p>user Listing works!</p>
+
+<div class=" table-responsive">
+  <table class="table">
+    <thead>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <!-- <th>Action</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{i + 1 }}</td>
+        <td class="row">
+          <span class="col-12">First Name:&nbsp;<strong>{{user.first_name}}</strong></span>
+          <span class="col-12">Last Name:&nbsp;<strong>{{user.last_name}}</strong></span>
+        </td>
+        <td>{{ user.email }}</td>
+        <!-- <td>
+          <button class="btn btn-sm btn-primary mr-2 mb-2 mb-lg-0">Edit</button>
+          <button class="btn btn-sm btn-info mr-2 mb-2 mb-lg-0">Details</button>
+          <button class="btn btn-sm btn-danger mb-0">Deactive</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,77 @@
+<p>user register works!</p>
+
+<div [innerHTML]="formMessage"></div>
+
+<div *ngIf="!submitted">
+  <form (ngSubmit)="submitRegistration()" #registrationForm="ngForm" >
+    <div class="form-group">
+      <label for="first_name">First Name</label>
+      <input type="text"
+        class="form-control"
+        id="first_name"
+        name="first_name"
+        required
+        [(ngModel)]="userModel.first_name"
+        #first_name="ngModel"
+        >
+      <div [hidden]="first_name.valid || first_name.pristine"
+        class="text-danger"
+        >
+        First Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name</label>
+      <input type="text"
+        class="form-control"
+        id="last_name"
+        name="last_name"
+        required
+        [(ngModel)]="userModel.last_name"
+        #last_name="ngModel"
+        >
+      <div [hidden]="last_name.valid || last_name.pristine"
+        class="text-danger"
+        >
+        Last Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        required
+        [(ngModel)]="userModel.email"
+        #email="ngModel"
+        >
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <div [hidden]="email.valid || email.pristine"
+        class="text-danger"
+        >
+        Email is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        [(ngModel)]="userModel.password"
+        required
+        #password="ngModel"
+        >
+      <div [hidden]="password.valid || password.pristine"
+        class="text-danger"
+        >
+        Password is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!registrationForm.form.valid">Submit</button>
+    <!-- <button type="button" class="btn btn-default" (click)="registrationForm.reset()">Reset</button> -->
+
+  </form>
+</div>
